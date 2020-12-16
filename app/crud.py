@@ -13,7 +13,7 @@ def get_loan(features: schemas.Features):
                                   'savings_amount', 'village_id', 'age'], dtype=int)
 
     # Open the model file
-    model = open("sql_app/loan_model", 'rb')
+    model = open("app/loan_model", 'rb')
     try:
         imported_model = \
             pickle.load(model)

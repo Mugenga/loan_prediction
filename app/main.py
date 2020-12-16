@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from sql_app import schemas, crud
+from app import schemas, crud
 
 app = FastAPI(debug=True)
 
