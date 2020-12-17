@@ -13,6 +13,7 @@ uvicorn = "*"
 pandas = "*"
 xgboost = "*"
 jinja2 = "*"
+aiofiles = "*"
 
 [requires]
 python_version = "3.8"

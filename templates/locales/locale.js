@@ -1,19 +1,19 @@
 define([
-    './locales/ca.js',
-    './locales/cs.js',
-    './locales/de.js',
-    './locales/es.js',
-    './locales/fr.js',
-    './locales/it.js',
-    './locales/nl.js',
-    './locales/pl.js',
-    './locales/pt_br.js',
-    './locales/ro.js',
-    './locales/ru.js',
-    './locales/tr.js',
-    './locales/vi.js',
-    './locales/zh.js',
-    './locales/zh_cn.js'
+    'templates/locales/ca.js',
+    'templates/locales/cs.js',
+    'templates/locales/de.js',
+    'templates/locales/es.js',
+    'templates/locales/fr.js',
+    'templates/locales/it.js',
+    'templates/locales/nl.js',
+    'templates/locales/pl.js',
+    'templates/locales/pt_br.js',
+    'templates/locales/ro.js',
+    'templates/locales/ru.js',
+    'templates/locales/tr.js',
+    'templates/locales/vi.js',
+    'templates/locales/zh.js',
+    'templates/locales/zh_cn.js'
 ], function() {
     var langId = (navigator.language || navigator.userLanguage).toLowerCase().replace('-', '_');
     var language = langId.substr(0, 2);

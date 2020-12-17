@@ -5,7 +5,7 @@ require.config({
         handlebars: './vendor/handlebars.min',
         handlebarsExtended: './utils/handlebars_helper',
         jquery: './vendor/jquery.min',
-        locales: './locales/locale',
+        locales: 'templates/./locales/locale',
         lodash: './vendor/lodash.custom.min',
         pathToRegexp: './vendor/path-to-regexp/index',
         prismjs: './vendor/prism',

@@ -1,3 +1,4 @@
+{% raw %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,16 +6,16 @@
   <title>Loading...</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <link href="vendor/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link href="vendor/prism.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" media="screen, print">
-  <link href="img/favicon.ico" rel="icon" type="image/x-icon">
-  <script src="vendor/polyfill.js"></script>
+  <link href="templates/vendor/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="templates/vendor/prism.css" rel="stylesheet" />
+  <link href="templates/css/style.css" rel="stylesheet" media="screen, print">
+  <link href="templates/img/favicon.ico" rel="icon" type="image/x-icon">
+  <script src="templates/vendor/polyfill.js"></script>
 </head>
 <body class="container-fluid">
 
 <script id="template-sidenav" type="text/x-handlebars-template">
-<nav id="scrollingNav">
+<nav id="scrollingNav">`
   <div class="sidenav-search">
     <input class="form-control search" type="text" placeholder="{{__ "Filter..."}}">
     <span class="search-reset">x</span>
@@ -687,6 +688,7 @@
   </div>
 </div>
 
-<script data-main="main.js" src="vendor/require.min.js"></script>
+<script data-main="templates/main.js" src="templates/vendor/require.min.js"></script>
 </body>
 </html>
+{% endraw %}

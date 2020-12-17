@@ -4,9 +4,13 @@ from fastapi.templating import Jinja2Templates
 
 from app import schemas, crud
 
+from starlette.staticfiles import StaticFiles
+
 app = FastAPI(debug=True)
 
 templates = Jinja2Templates(directory="templates/")
+
+app.mount("/templates", StaticFiles(directory="templates"), name="templates")
 
 app.add_middleware(
     CORSMiddleware,
@@ -20,12 +24,12 @@ app.add_middleware(
 @apiName Loan Prediction
 @apiGroup Loan
 
-@apiParam {Number} gender 
-@apiParam {Number} age 
-@apiParam {Number} amount_in_savings 
-@apiParam {Number} saving_freq 
-@apiParam {Number} duration 
-@apiParam {Number} village_id 
+@apiParam {Number} gender Gender for the user 0 for female and 1 for male
+@apiParam {Number} age User Age
+@apiParam {Number} amount_in_savings How much user has in savings
+@apiParam {Number} saving_freq How often does the user save
+@apiParam {Number} duration Loan duration
+@apiParam {Number} village_id Village in which the user comes from
 
 @apiSuccess {Number} code success code.
 @apiSuccess {String} message API Response Message.
