@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
+from fastapi.templating import Jinja2Templates
 
 from app import schemas, crud
 
