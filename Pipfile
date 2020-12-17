@@ -12,6 +12,7 @@ fastapi = "*"
 uvicorn = "*"
 pandas = "*"
 xgboost = "*"
+jinja2 = "*"
 
 [requires]
 python_version = "3.8"

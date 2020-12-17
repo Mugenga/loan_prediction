@@ -5,6 +5,8 @@ from app import schemas, crud
 
 app = FastAPI(debug=True)
 
+templates = Jinja2Templates(directory="templates/")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -12,6 +14,23 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+"""
+@api {post} /model Loan Prediction Endpoint
+@apiName Loan Prediction
+@apiGroup Loan
+
+@apiParam {Number} gender 
+@apiParam {Number} age 
+@apiParam {Number} amount_in_savings 
+@apiParam {Number} saving_freq 
+@apiParam {Number} duration 
+@apiParam {Number} village_id 
+
+@apiSuccess {Number} code success code.
+@apiSuccess {String} message API Response Message.
+@apiSuccess {Number} loan How muh user is allowed to borrow.
+"""
+
 
 # Main endpoint for loan prediction
 @app.post("/model")
@@ -24,8 +43,4 @@ def get_loan(features: schemas.Features):
 # Main endpoint for loan prediction
 @app.get("/")
 def get_loan():
-    return {"Hello": "Welcome to our API visit .../docs for the documentation"}
-
-
-
-
+    return templates.TemplateResponse('index.html')
