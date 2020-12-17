@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from starlette.middleware.cors import CORSMiddleware
 from fastapi.templating import Jinja2Templates
 
@@ -43,5 +43,5 @@ def get_loan(features: schemas.Features):
 
 # Main endpoint for loan prediction
 @app.get("/")
-def get_loan():
-    return templates.TemplateResponse('index.html')
+def get_loan(request: Request):
+    return templates.TemplateResponse('index.html', context={'request': request})
